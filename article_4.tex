@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Carry Article
+% LaTeX 
+% Version 1.1 (18/11/2023)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+10pt, % Main document font size
+a4paper, % Paper type, use 'letterpaper' for US Letter paper
+oneside, % One page layout (no page indentation)
+%twoside, % Two page layout (page indentation for binding and different headers)
+headinclude,footinclude, % Extra spacing for the header and footer
+BCOR5mm, % Binding correction
+]{scrartcl}
+
+\input{structure.tex} % Include the structure.tex file which specified the document structure and layout
+
+\hyphenation{Fortran hy-phen-ation} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR(S)
+%----------------------------------------------------------------------------------------
+
+\title{\normalfont\spacedallcaps{Carry Protocol}} % The article title
+
+\author{\spacedlowsmallcaps{ Andy Pan\textsuperscript{1}}} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
+
+\date{} % An optional date to appear under the author(s)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADERS
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\sectionmark}[1]{\markright{\spacedlowsmallcaps{#1}}} % The header for all pages (oneside) or for even pages (twoside)
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection~#1}} % Uncomment when using the twoside option - this modifies the header on odd pages
+\lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray} \vline}\color{halfgray}\hspace{0.5em}\rightmark\hfil}} % The header style
+
+\pagestyle{scrheadings} % Enable the headers specified in this block
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS & LISTS OF FIGURES AND TABLES
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title/author/date block
+
+\setcounter{tocdepth}{2} % Set the depth of the table of contents to show sections and subsections only
+
+\tableofcontents % Print the table of contents
+
+\listoffigures % Print the list of figures
+
+\listoftables % Print the list of tables
+
+\let\thefootnote\relax\footnotetext{\textsuperscript{1} \textit{Principle Engineer, Singapore}}
+
+\newpage
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+\section*{Abstract} % This section will not appear in the table of contents due to the star (\section*)
+
+Carry introduces an innovative advertising protocol tailored for the gaming industry, offering the potential for increased revenue for game developers and players. By replacing traditional advertising platforms, this protocol not only enhances the advertising effectiveness for advertisers but also reduces associated costs.\\
+
+The Carry Protocol introduces a transformative approach to integrating advertising into the world of web3 gaming. Through the innovative concept of slots - virtual spaces, soundscapes, or digital entities within games - it offers an unintrusive avenue for presenting advertisements. These slots, inherently tied to specific game environments, can manifest as visual displays, auditory cues, or even interactive virtual entities. Given their intrinsic value, slots are not just static elements but tradable assets within the Carry ecosystem. The paper delves deep into the mechanics of slots, elucidating their lifecycle, potential monetization strategies through auctions, and the importance of performance metrics in optimizing their impact. Moreover, the role of the Carry token and Carry fuel underpins the economic dynamics of the system, ensuring seamless transactions within the Carry marketplace. This protocol harnesses the power of blockchain and decentralized governance, promoting a balanced, sustainable, and player-centric advertising ecosystem in the gaming world.
+
+%----------------------------------------------------------------------------------------
+%	AUTHOR AFFILIATIONS
+%----------------------------------------------------------------------------------------
+
+% \let\thefootnote\relax\footnotetext{* \textit{Tbook, CEO, Shanghai, China}}
+
+
+
+%----------------------------------------------------------------------------------------
+
+\newpage % Start the article content on the second page, remove this if you have a longer abstract that goes onto the second page
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+% \renewcommand{\refname}{\spacedlowsmallcaps{References}} % For modifying the bibliography heading
+% \bibliographystyle{unsrt}
+% \bibliography{sample.bib} % The file containing the bibliography
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
