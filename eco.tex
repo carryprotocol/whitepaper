@@ -1,0 +1,197 @@
+\section{Carry Stakeholders}
+Carry Protocol's restructuring of the advertising ecosystem redistributes the value that was once dominated by advertising giants back to the advertising ecosystem. This ensures that the industry's genuine contributors receive enhanced incentives, leading to increased efficiency across the entire sector. In this section, we will delve into an analysis of the value that Carry Protocol can deliver to various stakeholders within the gaming industry's advertising ecosystem.
+
+\subsection{Developers}
+Developers play a vital role in the advertising ecosystem. They create services and platforms, providing spaces for ad placements and bridging the gap between users and advertisers.\\
+
+
+In many online advertising systems, when advertisers pay to put their ads in games or apps, a big chunk of the money they spend goes to the middlemen—the big companies that control the advertising space. This leaves the creators of the games or apps with less money than they could have earned, which can make them less interested in building new and better things for users.
+
+But with Carry Protocol, the game creators can work directly with the advertisers using something called "slots" for ads, which cuts out the expensive middleman fees. Advertisers pay less, and game creators make more money.
+
+In the old system, game creators didn't always know how well their ads were doing because they had to trust the middleman companies to tell them and to pay them. But Carry Protocol changes that. It lets the game creators see exactly how the ads are performing. With this information, they can be paid fairly based on how well the ads are actually doing.
+
+In the end, Carry Protocol offers a clearer and more honest way of doing things, which should make game creators happy and more willing to get on board.
+
+\subsection{Advertisement Demanders}
+Advertisement demanders are the "financial backbone" of the advertising ecosystem, investing substantial budgets to achieve growth or brand objectives within the industry. A healthy industry should provide valuable feedback to these advertisement demanders.\\
+
+Despite the significant increase in advertising expenditures due to digital advertising, the most common source of complaints within the industry is advertisement demanders. This is primarily due to the exorbitant fees and non-transparent data mechanisms on advertising platforms, leading to a loss of trust in the industry.
+
+Within the Carry Protocol, we have eliminated the need for advertising platforms by providing slots and an open advertising protocol. This allows advertisement demanders to allocate their budgets directly to services and games offered by developers, thus directly impacting users. This approach significantly enhances the return on investment (ROI) for advertisement demanders and elevates the overall industry efficiency.\\
+
+To counteract the monopolistic position of advertising platforms, advertisement demanders have traditionally needed to allocate substantial budgets for ad performance evaluations to ensure they are not deceived by the platforms. Due to the dominance of real data by advertising platforms, the process of evaluating ad performance has been quite challenging. In the Carry Protocol, we have developed measurement metrics for assessing ad performance, and both advertisement demanders and developers involved in slot ad placements can access this data transparently. This results in a significant reduction in costs for advertisement demanders when evaluating ad performance and ultimately enhances the efficiency of ad placements.
+
+
+
+\subsection{Agencies}
+
+Advertising agencies play a crucial role in the advertising ecosystem by serving advertisers. Their purpose is to enhance the efficiency of ad placements and increase transparency in the industry. However, in the traditional advertising ecosystem, the data is monopolized by advertising platforms, making it challenging for advertising intermediaries to acquire the necessary data. This, in turn, results in significant difficulties when measuring effectiveness, analyzing audience profiles, and optimizing ad placement strategies.\\
+
+Advertising agencies are dissatisfied with the current state of the advertising industry. Carry Protocol, as an open advertising ecosystem, eliminates data monopolization by advertising platforms, allowing advertising intermediaries to provide various services to advertisers with the latter's authorization.\\
+
+Agency’s role in the digital advertising ecosystem is important as they act as intermediaries between advertisers (advertisement demands) and slot owners. In a slot duration marketplace, slots are auctioned, and agencies need to devise strategic bidding strategies to secure optimal ad placements for their clients.
+
+
+\subsubsection{Purchasing a Series of Slot Durations in the Marketplace}
+
+\begin{enumerate}
+    \item \textbf{Slot Selection}: Identify and select a series of slots that align with the advertiser’s target audience and campaign goals.
+    \item \textbf{Bid Formulation}: For each selected slot, formulate a bid based on the strategy mentioned above.
+    \item \textbf{Auction Participation}: Participate in auctions for the selected slots, placing bids in real-time.
+    \item \textbf{Winning and Allocation}: If a bid is successful, allocate the slot to the advertiser’s campaign. Adjust the remaining budget and strategy for subsequent auctions accordingly.
+    \item \textbf{Performance Monitoring}: Continuously monitor the performance of acquired slots and adjust future bids and strategies based on real-time data.
+\end{enumerate}
+
+
+\subsubsection{Dutch Auction (Open Descending Price Auction)}
+In a Dutch Auction, the price of the ad slot starts high and decreases over time until an advertiser places a bid or the price drops to a reserve price.
+
+\paragraph{Agency Strategy for Dutch Auction:} 
+The agency aims to secure the ad slot for its client at the lowest possible price but also needs to balance the risk of losing the slot to another bidder. The strategy could be defined as follows:
+
+\[
+B_i(t) = 
+\begin{cases} 
+0 & \text{if } P(t) > V_i \\
+V_i & \text{if } P(t) \leq V_i \text{ and } \text{Risk}(t, V_i) < \theta \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+Here:
+\begin{itemize}
+    \item \( B_i(t) \) is the bid from agency \( i \) at time \( t \)
+    \item \( P(t) \) is the current price at time \( t \)
+    \item \( V_i \) is the agency’s valuation for the ad slot
+    \item \( \text{Risk}(t, V_i) \) is a function evaluating the risk of losing the slot if waiting any longer, considering the current time and valuation
+    \item \( \theta \) is a risk threshold, beyond which the agency decides to bid to avoid losing the slot
+\end{itemize}
+
+In a more sophisticated approach, the agency not only considers the current price and its own valuation but also takes into account the time decay, estimated competition, and a dynamic risk assessment.
+
+\[
+B_i(t) = 
+\begin{cases} 
+0 & \text{if } P(t) > V_i \\
+V_i \cdot \left(1 - e^{-\lambda \cdot (T-t)}\right) & \text{if } P(t) \leq V_i \cdot \left(1 - e^{-\lambda \cdot (T-t)}\right) \text{ and } \text{Competition}(t, P(t)) \leq \gamma \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+Here:
+\begin{itemize}
+    \item \( T \) is the total time duration of the auction
+    \item \( \lambda \) is a parameter controlling the time sensitivity of the bid
+    \item \( \text{Competition}(t, P(t)) \) is a function estimating the level of competition based on the current time and price
+    \item \( \gamma \) is a competition threshold, beyond which the agency decides not to bid due to high competition
+\end{itemize}
+
+In this strategy, the agency increases its willingness to bid as the auction progresses, adjusting its bid according to the time decay function. The agency also evaluates the level of competition at the current price and decides to bid only if the estimated competition is below a certain threshold.
+
+\paragraph{ROI of Agencies' Strategy}
+
+In a Dutch Auction, the price of the advertising slot decreases over time, and agencies aim to secure slots at an optimal price point that balances cost and potential returns. An advanced bidding strategy should therefore consider both the cost of the slot and the expected return on investment (ROI).
+
+The bid function \( B_i(t) \) for agency \( i \) at time \( t \) can be formulated as:
+
+\[
+B_i(t) = 
+\begin{cases} 
+0 & \text{if } P(t) > V_i \text{ or } \text{ROI}_i(t, P(t)) < \text{ROI}_{\text{threshold}} \\
+P(t) & \text{if } P(t) \leq V_i \text{ and } \text{ROI}_i(t, P(t)) \geq \text{ROI}_{\text{threshold}} \text{ and } \text{Competition}(t, P(t)) \leq \gamma \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+Here:
+\begin{itemize}
+    \item \( \text{ROI}_i(t, P(t)) \) is the expected return on investment for agency \( i \) at time \( t \) given the current price
+    \item \( \text{ROI}_{\text{threshold}} \) is the minimum acceptable ROI for the agency
+    \item \( \text{Competition}(t, P(t)) \) is a function estimating the level of competition based on the current time and price
+    \item \( \gamma \) is a competition threshold, beyond which the agency decides not to bid due to high competition
+\end{itemize}
+
+The function \( \text{ROI}_i(t, P(t)) \) can be further defined based on the agency’s estimation of the ad slot’s effectiveness, the target audience's size, and other relevant factors.  On the basis, ROI can be understood as:
+
+\begin{equation*}
+    ROI = \frac{Income}{Spending}
+\end{equation*}
+
+In real life the estimation of the real ROI might be more complicated than this. If an agency is conducting one advertisement campaign in one month time, the return can be of the following notation:
+
+\begin{equation*}
+        ROI = \frac{\Sigma_i(I_i \cdot N_i - E_i) - \Sigma{C_{slot}}}{\Sigma{C_{slot}}}
+\end{equation*}
+
+where:
+\begin{itemize}
+    \item \( \text{I}_i \) is the item price for \(i\) that has been sold in this campaign duration. 
+    \item \( \text{E}_i \) is the expected sales amount of product \(i\).
+    \item \( \text{C}_{slot} \) is the cost of a slot.
+\end{itemize}
+
+
+The theoretical returns are a benchmark for the success of any agencies that is on Carry protocol. Real strategy returns can be monitored and calculated through several methods. The Carry measurement and metrics can be used for capturing the real ROIs of any efforts put on the network. Furthermore, we can adopt the P value in the statistics of the sales side to estimate the general impact of certain advertisement campaign.\\
+
+There are metrics that can also be taken into consideration which agencies could measure when trying to estimate the expected outcome for certain collection of slots:
+
+\begin{itemize}
+    \item \textbf{Total Crypto Assets of the Slot Owner's Address:} This reflects the financial strength of the slot owner. Agencies can use this information to assess whether the slot owner has enough resources and motivation to maintain and promote their slots, indirectly affecting the advertisement’s effectiveness.
+    \item \textbf{Fair Market Price of the Attached NFT to the Slot} This indicates the value of the NFT attached to the slot. High-value NFTs may attract more user attention, potentially increasing the advertisement’s exposure and effectiveness. Agencies can use this information to select slots with high-value NFTs for ad placements.
+    \item \textbf{Active User Count of the Onchain Game Associated with the Slot:} This reflects the game’s activity level and user base size. A higher number of active users means more opportunities for ad exposure. Agencies can prioritize games with a large active user base for their ad placements.
+\end{itemize}
+
+In addition to the above metrics, agencies can choose from a wider range of dimensions available through the Open Carry Ada Network, such as user geographic locations, interests, consumption habits, and more. This allows agencies to offer more precise and personalized ad placement services to advertisers, improving the advertisement’s conversion rate and ROI.
+
+By considering a comprehensive set of relevant metrics, agencies can more accurately estimate advertisement effectiveness, providing more valuable and competitive services to advertisers.
+
+
+
+
+\subsection{Users}
+In the traditional advertising ecosystem, users are often the most overlooked participants. Advertising platforms typically assume that since users are already enjoying some basic internet services for free, they should be willing to provide their data and privacy, along with tolerating advertisements. In reality, the commercial value generated from user data has long contributed to the prosperity of the advertising ecosystem. Users, as they engage in internet activities, are not just consumers of services; they actively contribute their data, thereby supporting the ecosystem.\\
+
+The Carry Protocol believes that users have the right to access the commercial value generated by their data and the ability to choose how their data is utilized. Within the slot framework, the contributions of players and users' data can be transparently tracked, allowing developers, users, and advertisers to negotiate ad settlement terms based on the value of user data.\\
+
+We encourage developers and advertisers to share a larger portion of the revenue with players and users. This not only increases user engagement but also helps advertisers build more direct relationships with users and foster more adhesive communities, ultimately granting advertisers greater influence over users.
+
+
+\subsection{Comparison of Incentive Distribution}
+
+
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{>{\raggedright\arraybackslash}p{2.5cm} p{6cm} p{6cm}}
+        \toprule
+        \textbf{Role} & \textbf{Traditional Ad Platform} & \textbf{Carry Protocol}  \\
+        \midrule
+        \multirow{2}{2.5cm}{Developers} 
+        & Income is limited by platform fees, hindering innovation. 
+        & Direct collaboration with advertisers through slots, increased income, reduced costs.  \\
+        \cmidrule{2-3}
+        & Lack of transparent ad performance data, unfavorable negotiations. 
+        & Access to ad performance data at any time, direct settlement with advertisers. \\
+        \midrule
+        \multirow{2}{2.5cm}{Advertisers} 
+        & High platform fees, opaque data mechanisms lower ROI. 
+        & Directly allocate budgets to developer services, improving ROI and industry efficiency. \\
+        \cmidrule{2-3}
+        & High cost of ad performance testing, data constrained by platforms. 
+        & Use Carry Protocol's measurement metrics for ad performance testing, reducing cost. \\
+        \midrule
+        \multirow{2}{2.5cm}{Users} 
+        & Data and privacy are viewed and contributions with limited benefits. 
+        & Have the right to receive the commercial value of their data, choose whether data is used. \\
+        \cmidrule{2-3}
+        & Participate in internet activities with contributions but no benefits. 
+        & Share more revenue, build more direct relationships and sticky communities.\\
+        \midrule
+        Agencies 
+        & Difficulty in data acquisition limits effectiveness measurement, audience profiling, and campaign optimization. 
+        & Provide more services in Carry Protocol's open advertising ecosystem, improving efficiency.\\
+        \bottomrule
+    \end{tabular}
+    \caption{Comparison of Incentives}
+    \label{table:comparison}
+\end{table}
