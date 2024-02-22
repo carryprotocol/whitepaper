@@ -1,0 +1,340 @@
+\section{Economics and Incentive Mechanisms}
+
+
+The Carry token introduces several new features:
+
+\textbf{Governance Vote}: Each Carry token represents a vote in the platform's governance process. The more tokens held in a wallet, the greater the holder's influence and voting power on proposals.
+
+\textbf{Medium of Exchange}: All transactions within the platform can be settled using Carry tokens, with fees and rewards generated during the transaction process distributed in Carry tokens.
+
+\textbf{Collateral}: Carry token holders can use their tokens as collateral to access additional services provided by the platform, including identity management, asset management, security protection, and SDK provision.
+
+\textbf{Membership}: Participants can obtain membership through payment and by providing collateral, which includes access to data analysis, market advice, and additional services such as identity management, asset management, security protection, and SDK provision.
+
+\textbf{Auction Marketplace Creation}: The ad auction process within the Carry ecosystem is vulnerable to several hard-to-prevent attacks, including collusion and witch hunts. Users can use Carry tokens as collateral to create an auction marketplace. The marketplace creator can adjust its parameters, and manage the transaction process, but cannot manipulate the transaction outcomes. The main responsibility of the creator is to regulate participant behavior and to mitigate certain attacks that are currently difficult to prevent against the VCG mechanism. Furthermore, the creator's behavior will be monitored, and abnormal activities will trigger a penalty vote.
+
+\textbf{Carry-Game Token AMM Pool}: The Carry platform will offer services for numerous games. In the future, we will provide a game asset Dex service, allowing users to exchange assets across various games using Carry tokens as an intermediary. Token holders can create an AMM pool for liquidity mining by providing collateral.
+
+\subsection{Governance and Collateral}
+Carry aims to be a decentralized service platform for games. Virtually all interactions within the platform, including parameter designs, development direction, auction methods modifications, auction market creation, and various auction mechanism parameters, will be determined through votes by Carry token holders. The voting process is directly proportional to the number of Carry tokens held, granting token holders proportional voting rights and influence over proposals.
+
+Users can provide Carry tokens as collateral to gain more rights. Basic collateral rights include access to additional services provided by the platform's three modules (identity management, asset management, and security protection), contributions from SDK users in the ecosystem, and penalties for misconduct. Moreover, users can collateralize their assets to earn revenue by creating and managing an auction marketplace. In the future, after establishing the game asset exchange pool, users can also provide liquidity to the exchange pool to earn mining rewards.
+
+\subsection{Customized Auction Market}
+The auction process in the Carry ecosystem is susceptible to several hard-to-defend attacks, including collusion and witch hunts. Users can collateralize Carry tokens to establish an auction marketplace, where the creator can adjust its parameters and oversee the transaction process without influencing the outcomes. The creator's primary role is to regulate participant behavior to mitigate certain VCG mechanism attacks that are currently indefensible. The creator's actions will be under surveillance, and any detected abnormal behavior will prompt a penalty vote. Auction marketplace creators could be individual game operators selling in-game ad space or ad space traders managing their traffic. All Carry token holders are eligible to create an auction marketplace, provided they collateralize sufficient Carry tokens and abstain from malicious practices.
+% Carry token has even more new features:
+
+% \textbf{Governance Vote}: each Carry token represents a vote in the platform's governance process. The more tokens held in the wallet, the more votes and influence the holder has on proposals.
+
+% \textbf{Medium of Exchange}: All transactions within the platform can be settled in the form of \$Carry tokens, and the fees and rewards generated during the transaction process are distributed by \$Carry tokens.
+
+% \textbf{Collateral:} \$Carry holders can Collateral tokens to use the additional services provided by the platform, including identity management, asset management and security protection, and SDK provision.
+
+% \textbf{Membership}: Participants can obtain membership through payment and Collateral, which includes data analysis, market advice, and additional services such as identity management, asset management and security protection, and SDK provision, etc.
+
+% \textbf{Auction Marketplace Creation}: The ad auction process in the Carry ecosystem is subject to a number of hard-to-prevent attacks, including collusion attacks and witch hunts, among others. Users can Collateral \$Carry to create an auction market. The parameters of the auction market can be adjusted by the creator, and the transaction process in the market will also be managed by the creator, but the creator cannot manipulate the transaction results, and the creator's main job is to control the behavior of the participants, and to prevent some of the currently unpreventable attacks against VCG. Moreover, the creator's behavior will also be monitored, and if abnormal behavior is found, a penalty vote will be initiated.
+
+% \textbf{Carry-Game Token AMM Pool: }Carry platform will provide services for a large number of games, in the future we will provide game asset Dex services, by \$Carry tokens as an intermediary, users can exchange assets in all kinds of games, the Collaterale can create an AMM pool for liquidity mining.
+
+% \subsection{Governance and Collateral}
+% Carry will be a decentralized service platform for games. Almost all interactions and parameter designs within the platform, as well as the direction of development, will be voted on by the \$Carry token holders, including the increase or decrease of auction methods, the creation of the auction market, the parameter designs of various auction mechanisms, the future development of the Carry platform, etc. The voting process is positively related to the number of \$Carry tokens held by the token holders. The voting process of the platform's governance is positively correlated with the number of \$Carry tokens held by the token holders, the more \$Carry tokens, the more the holders have the right to vote and influence on the proposal.
+
+% Users can Collateral \$Carry to gain more equity. The equity from the basic Collateral mainly includes additional services provided by the three modules of the platform (identity management, asset management and security protection), contributions from SDK users in the eco-system, and fines for misbehavior, etc., and the Collaterale can participate in the distribution of the revenue. In addition, users can also Collateral their own assets and gain revenue by creating and managing an auction market, and in the future, after the construction of the game asset exchange pool is completed, users can provide liquidity for the exchange pool to gain mining revenue.
+
+% \subsection{Customized Auction Market}
+% The auction process in the Carry ecosystem is subject to a number of attacks that are difficult to prevent, including collusion attacks and witch attacks. Users can Collateral \$Carry to create an auction market, the parameters of the auction market can be adjusted by the creator, and the transaction process in the market will also be managed by the creator, but the creator can not manipulate the transaction results, the creator's main job is to control the behavior of the participants, to prevent some of the currently unpreventable attacks against the VCG. Moreover, the creator's behavior will be monitored, and a penalty vote will be initiated when abnormal behavior is detected. Auction marketplace creators can be individual game operators selling in-game ad space, or ad space traders maintaining their own traffic, and all \$Carry token holders can create an auction marketplace, as long as they Collateral enough \$Carry tokens and don't engage in malicious behavior.
+
+\subsection{Auction Mechanisms}
+Carry platform provides personalized advertising auction marketplace creation form, so we provide all kinds of mainstream auction mechanism services, including open incremental auction (British auction), open decremental auction (Dutch auction), GFP auctions, GSP auctions, VCG auctions, etc., and additional design of the Dutch auction mechanism and VCG auction mechanism.
+
+\subsubsection{Incremental auction (English auction)}
+An Incremental Auction is a type of auction where participants openly bid against each other, with bids increasing in value until no higher bids are offered. This is in contrast to sealed-bid auctions, where bids are submitted privately.
+
+In an Incremental Auction:
+
+1. Open Bidding: The auctioneer starts the bidding process at a certain price, often the minimum acceptable bid. Participants then openly raise the bid in increments, announcing their bids aloud or indicating them through gestures or signals.
+
+2. Incremental Bidding: Bids must exceed the current highest bid by a predefined increment. The auctioneer may announce these increments, and participants must adhere to them when raising their bids.
+
+3. Competitive Bidding: Bidders continue to raise the price until no one is willing to offer a higher bid. This competitive process typically results in the highest possible price for the item being auctioned.
+
+4. Winner Determination: The participant who offers the highest bid when no further bids are made wins the auction and is obligated to pay the final bid amount.
+
+5. Transparency and Participation: Incremental auctions offer transparency as all participants can see each other's bids in real-time, allowing them to make informed decisions about whether to continue bidding.
+
+Incremental auctions are commonly used for selling various types of goods, including antiques, artwork, real estate, and other high-value items. They are also employed in online platforms and platforms for advertising space, where bids are placed electronically and in real-time. The open nature of incremental auctions promotes competition among bidders, often leading to higher prices compared to other auction formats.
+
+
+\subsubsection{Dutch Auction (Open Descending Price Auction)}
+In a Dutch Auction, the price of the ad slot starts high and decreases over time until an advertiser places a bid or the price drops to a reserve price.
+
+\paragraph{Agency Strategy for Dutch Auction:} 
+The agency aims to secure the ad slot for its client at the lowest possible price but also needs to balance the risk of losing the slot to another bidder. The strategy could be defined as follows:
+
+\[
+B_i(t) = 
+\begin{cases} 
+0 & \text{if } P(t) > V_i \\
+V_i & \text{if } P(t) \leq V_i \text{ and } \text{Risk}(t, V_i) > \theta \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+Here:
+\begin{itemize}
+    \item \( B_i(t) \) is the bid from agency \( i \) at time \( t \)
+    \item \( P(t) \) is the current price at time \( t \)
+    \item \( V_i \) is the agency’s valuation for the ad slot
+    \item \( \text{Risk}(t, V_i) \) is a function evaluating the risk of losing the slot if waiting any longer, considering the current time and valuation
+    \item \( \theta \) is a risk threshold, beyond which the agency decides to bid to avoid losing the slot
+\end{itemize}
+
+In a more sophisticated approach, the agency not only considers the current price and its own valuation but also takes into account the time decay, estimated competition, and a dynamic risk assessment.
+
+\[
+B_i(t) = 
+\begin{cases} 
+0 & \text{if } P(t) > V_i \\
+V_i \cdot \left(1 - e^{-\lambda \cdot (T-t)}\right) & \text{if } P(t) \leq V_i \cdot \left(1 - e^{-\lambda \cdot (T-t)}\right) \text{ and } \text{Competition}(t, P(t)) \leq \gamma \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+Here:
+\begin{itemize}
+    \item \( T \) is the total time duration of the auction
+    \item \( \lambda \) is a parameter controlling the time sensitivity of the bid
+    \item \( \text{Competition}(t, P(t)) \) is a function estimating the level of competition based on the current time and price
+    \item \( \gamma \) is a competition threshold, beyond which the agency decides not to bid due to high competition
+\end{itemize}
+
+In this strategy, the agency increases its willingness to bid as the auction progresses, adjusting its bid according to the time decay function. The agency also evaluates the level of competition at the current price and decides to bid only if the estimated competition is below a certain threshold.
+
+\paragraph{Risk Function and Competition Function Design}
+
+To address the dynamic and complex nature of bidding in a Dutch auction, where the price of an ad slot decreases over time, we propose sophisticated models for evaluating the risk of losing the slot and estimating the level of competition, i.e., $Risk(t, V_i)$ and $Competition(t, P(t))$.
+
+
+
+The risk of losing the ad slot increases as the auction progresses and as the current price approaches the agency's valuation of the slot. We model this risk as a function of time and the difference between the valuation and the current price, incorporating market competition. It is calculated as:
+
+\begin{equation}
+Risk(t, V_i) = \frac{1}{1 + e^{-\kappa \cdot (V_i - P(t)) \cdot \omega(t)}}
+\end{equation}
+
+where:
+\begin{itemize}
+    \item \( \kappa \) controls the steepness of the function, reflecting how valuation differences affect risk perception.
+    \item \( \omega(t) \) is a weight function that increases with time, indicating the growing risk as the auction nears its end. The calculation formula is shown in Equation (4). 
+\end{itemize}
+
+\begin{equation}
+\omega(t) = \frac{T - t}{T}
+\end{equation}
+
+
+Competition dynamically changes based on multiple factors including the current price, time elapsed, and historical bidding behavior. As the price decreases, the auction may attract more bidders, affecting the competition level. The calculation formula is defined as:
+
+\begin{equation}
+\begin{aligned}
+Competition(t, P(t)) &= \beta \cdot \log\left(\frac{P(0)}{P(t)}\right) + \eta \cdot \frac{t}{T} \\
+&= \beta_0 \cdot \left(1 + \mu \cdot \frac{dP}{dt}\right) \cdot \log\left(\frac{P(0)}{P(t)}\right) + \eta \cdot \frac{t}{T} \\
+\end{aligned}
+\end{equation}
+
+where:
+\begin{itemize}
+    \item \( P(0) \) represents the initial price of the ad slot at the start of the auction.
+    \item \( \beta \) represents the effect of price decrease on attracting more competition. It can be modeled as a function related to the rate of price decrease, enhancing our understanding of how price dynamics influence competition levels during the auction.
+    \begin{equation}
+\beta = \beta_0 \cdot \left(1 + \mu \cdot \frac{dP}{dt}\right)
+\end{equation}
+
+where:
+\begin{itemize}
+    \item \( \beta_0 \) is the base competition attractiveness coefficient, indicating the level of competition without price changes.
+    \item \( \mu \) is a modulation coefficient that reflects the sensitivity of competition attractiveness to the rate of price decrease.
+    \item \( \frac{dP}{dt} \) represents the rate of price decrease, indicating the change in price over unit time.
+\end{itemize}
+
+    \item \( \eta \) captures the impact of time on competition, reflecting how urgency among bidders may increase as the auction progresses.
+\end{itemize}
+
+These models provide a more accurate representation of the strategic considerations in a Dutch auction, allowing agencies to make informed decisions based on the evolving risk and competition levels.
+
+
+\paragraph{ROI of Agencies' Strategy}
+
+In a Dutch Auction, the price of the advertising slot decreases over time, and agencies aim to secure slots at an optimal price point that balances cost and potential returns. An advanced bidding strategy should therefore consider both the cost of the slot and the expected return on investment (ROI).
+
+The bid function \( B_i(t) \) for agency \( i \) at time \( t \) can be formulated as:
+
+\[
+B_i(t) = 
+\begin{cases} 
+0 & \text{if } P(t) > V_i \text{ or } \text{ROI}_i(t, P(t)) < \text{ROI}_{\text{threshold}} \\
+P(t) & \text{if } P(t) \leq V_i \text{ and } \text{ROI}_i(t, P(t)) \geq \text{ROI}_{\text{threshold}} \text{ and } \text{Competition}(t, P(t)) \leq \gamma \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+Here:
+\begin{itemize}
+    \item \( \text{ROI}_i(t, P(t)) \) is the expected return on investment for agency \( i \) at time \( t \) given the current price
+    \item \( \text{ROI}_{\text{threshold}} \) is the minimum acceptable ROI for the agency
+    \item \( \text{Competition}(t, P(t)) \) is a function estimating the level of competition based on the current time and price
+    \item \( \gamma \) is a competition threshold, beyond which the agency decides not to bid due to high competition
+\end{itemize}
+
+The function \( \text{ROI}_i(t, P(t)) \) can be further defined based on the agency’s estimation of the ad slot’s effectiveness, the target audience's size, and other relevant factors.  On the basis, ROI can be understood as:
+
+\begin{equation*}
+    ROI = \frac{Income}{Spending}
+\end{equation*}
+
+In real life the estimation of the real ROI might be more complicated than this. If an agency is conducting one advertisement campaign in one month time, the return can be of the following notation:
+
+\begin{equation*}
+        ROI = \frac{\Sigma_i(I_i \cdot N_i - E_i) - \Sigma{C_{slot}}}{\Sigma{C_{slot}}}
+\end{equation*}
+
+where:
+\begin{itemize}
+    \item \( \text{I}_i \) is the item price for \(i\) that has been sold in this campaign duration. 
+    \item \( \text{E}_i \) is the expected sales amount of product \(i\).
+    \item \( \text{C}_{slot} \) is the cost of a slot.
+\end{itemize}
+
+
+The theoretical returns are a benchmark for the success of any agencies that is on Carry protocol. Real strategy returns can be monitored and calculated through several methods. The Carry measurement and metrics can be used for capturing the real ROIs of any efforts put on the network. Furthermore, we can adopt the P value in the statistics of the sales side to estimate the general impact of certain advertisement campaign.\\
+
+There are metrics that can also be taken into consideration which agencies could measure when trying to estimate the expected outcome for certain collection of slots:
+
+\begin{itemize}
+    \item \textbf{Total Crypto Assets of the Slot Owner's Address:} This reflects the financial strength of the slot owner. Agencies can use this information to assess whether the slot owner has enough resources and motivation to maintain and promote their slots, indirectly affecting the advertisement’s effectiveness.
+    \item \textbf{Fair Market Price of the Attached NFT to the Slot} This indicates the value of the NFT attached to the slot. High-value NFTs may attract more user attention, potentially increasing the advertisement’s exposure and effectiveness. Agencies can use this information to select slots with high-value NFTs for ad placements.
+    \item \textbf{Active User Count of the Onchain Game Associated with the Slot:} This reflects the game’s activity level and user base size. A higher number of active users means more opportunities for ad exposure. Agencies can prioritize games with a large active user base for their ad placements.
+\end{itemize}
+
+In addition to the above metrics, agencies can choose from a wider range of dimensions available through the Open Carry Advertisement Network, such as user geographic locations, interests, consumption habits, and more. This allows agencies to offer more precise and personalized ad placement services to advertisers, improving the advertisement’s conversion rate and ROI.
+
+By considering a comprehensive set of relevant metrics, agencies can more accurately estimate advertisement effectiveness, providing more valuable and competitive services to advertisers.
+
+\subsubsection{Generalized first-price auction}
+In a GFP auction(Generalized First Price), advertisers bid based on their valuation of the ad space. The advertiser with the highest bid wins the spot and pays the bid they submitted. This auction mechanism is similar to a traditional first price auction, but GFP allows bidders to submit a variety of unconventional bids, such as maximum bids, click-through rates, conversion rates, etc.
+
+The hallmark of a GFP auction is that it promotes competition by allowing bidders to submit their true valuation of the ad space, thus ensuring that the ad space is allocated to the most valuable advertiser. However, despite the advantages of simplicity and guaranteed revenue, GFP auctions are less stable. This is because individual advertisers may modify their placement prices frequently in order to obtain optimal revenue. For example, an advertiser may continually increase its price in order to gain display; after gaining display, it may begin to continually decrease its price in order to reduce costs. This competition is relatively arbitrary and it is easy to know competitors' bids.
+
+In addition, when the advertiser with the highest bid stops placing, it is prone to large fluctuations in ad platform revenue. This is because other advertisers may have lower bids, resulting in a drop in ad platform revenue. Therefore, when using GFP auctions, advertising platforms need to consider how to balance the competition from advertisers and maintain a smooth revenue.
+
+
+\subsubsection{Generalized Second-Price auction}
+In a GSP auction, advertisers bid based on their valuation of the spot, and the highest bidder wins the spot and pays the price offered by the second highest ranked advertiser.
+
+\subsubsection{Vickrey–Clarke–Groves auction}
+VCG Auctions are sealed bid auctions of multiple items. Bidders submit bids that report the valuation of their items without knowing the bids of other bidders. The auction system allocates items in a socially optimal manner: it charges each individual for the losses they inflict on other bidders. It incentivizes bidders to bid their true expectations by ensuring that each bidder's best strategy is to bid the true valuation of the item.
+
+The first step in the VCG mechanism is for participants to submit their preferences for resources or items. This may include valuation of different resources, order of preference, or other relevant information. We analyze data from the Carry system to obtain relevant data about the published Slot (including TVL of the game, number of viewers, number of clicks in the past, average revenue in the past, etc.) to calculate the evaluation price of the Slot as the reference price of the Slot. This reference price affects the valuation of the advertiser participants. Based on the participants' preferences and bids, the impact of each possible resource allocation scheme on the overall social welfare is calculated. The social welfare can be expressed in the form of a weighted sum where the utility of each participant is weighted by its weights.
+
+The allocation scheme that maximizes the impact on overall social welfare is chosen as the final resource allocation outcome. Typically, this process involves evaluating all possible allocation options to determine which one is most favorable to overall social welfare. For each participant, the marginal contribution to overall social welfare is calculated, i.e., the amount by which overall social welfare would change if the participant did not participate. This is referred to as the VCG payment.The calculation of the VCG payment usually entails calculating the amount by which overall social welfare would change if the participant were to withdraw.
+
+For any set of auctioned items \( M = \{t_1,\ldots,t_m\} \) and any set of bidders \( N = \{b_1,\ldots,b_n\} \), let \( V^M_N \) be the social value of the VCG auction for a given bid-combination. That is, how much each person values the items they've just won, added up across everyone. The value of the item is zero if they do not win. For a bidder \( b_i \) and item \( t_j \), let the bidder's bid for the item be \( v_{i}(t_{j}) \). The notation \( A \setminus B \) means the set of elements of A which are not elements of B.
+
+A bidder \( b_i \) whose bid for an item \( t_j \) is an overbid, namely \( v_{i}(t_{j}) \), wins the item, but pays \( V^{M}_{N \setminus \{b_i\}}-V^{M \setminus \{t_j\}}_{N \setminus \{b_i\}} \), which is the social cost of their winning that is incurred by the rest of the agents.
+
+Indeed, the set of bidders other than \( b_i \) is \( N \setminus \{b_i\} \). When item \( t_j \) is available, they could attain welfare \( V^{M}_{N \setminus \{b_i\}} \). The winning of the item by \( b_i \) reduces the set of available items to \( M \setminus \{t_j\} \), so the attainable welfare is now \( V^{M \setminus \{t_j\}}_{N \setminus \{b_i\}} \). The difference between the two levels of welfare is therefore the loss in attainable welfare suffered by the rest of the bidders, as predicted, given the winner \( b_i \) got the item \( t_j \). This quantity depends on the offers of the rest of the agents and is unknown to agent \( b_i \).
+
+The winning bidder whose bid is the true value \( A \) for the item \( t_j \), \( v_{i}(t_{j})=A \), derives maximum utility \[ A - \left(V^{M}_{N \setminus \{b_i\}}-V^{M \setminus \{t_j\}}_{N \setminus \{b_i\}}\right) .\]
+
+Additional, hesitation VCG mechanism calculation process is too complicated, we refer to Facebook's VCG mechanism. the Slot reference price of VCG mechanism will be related to CPM (Cost Per Mille) and CTR (Click-Through Rate). Because advertisers' revenue is impossible to know, eCPM is used as an alternative to CPM. eCPM is commonly used to measure the effectiveness of advertisements in an ad network, and it calculates the average revenue generated by an advertisement per 1,000 displays, regardless of whether or not the advertisement is clicked. The eCPM is calculated by dividing the ad revenue by the number of times the ad is displayed and multiplying by 1000. eCPM is given by the formula:
+
+\[ eCPM = \frac{Total\ Revenue}{Impressions} \times 1000 \]
+
+Where Total Revenue represents the total revenue of the advertisement and Impressions represents the number of times the advertisement is displayed. Then calculate
+\begin{equation} 
+\begin{split}
+    CPM \ Paid = Next \ Highest \ Slot \ Bid *(Slot \ eCPM - \ Following \ Slot \ eCPM) \\ 
++ Following \ Slot \ Bid *(Following \ Slot \ eCPM - Subsequent \ Slot \ eCPM).
+\end{split}
+\end{equation}
+
+The calculation method of deduction, if we strictly follow th e definition of VCG, we need to calculate the revenue loss of all other advertisers all over again, this is a two-tier FOR loop on the line, when there is a lot of depth of ads, this calculation is costly, we only take the 2nd ads under the first price of the first ad position to calculate this loss.
+
+
+
+% \subsection{Carry Token Utilization Scenarios}
+
+% \begin{table}[!htb]
+%     \centering
+%     \begin{tabular}{c|c|c}
+%         \toprule
+%         Scenatio & Type & Add Value \\
+%         \midrule
+%         \rule{0pt}{2ex} 
+%         Slot placement durations auction & Token &Transaction fees discount  \\
+%         \rule{0pt}{2ex} 
+%         Ad Content Placement & GAS &  \\
+%         \rule{0pt}{2ex} 
+%         Slot Initialization &GAS& \\
+%         \rule{0pt}{2ex} 
+%         Effect tracking & Token & \\
+%         \rule{0pt}{2ex} 
+%         Slot settlement  & Token & \\
+%         \rule{0pt}{2ex} 
+%         Issue a Proposal & Governance & \\
+%         \rule{0pt}{2ex} 
+%         Vote on snapshot & Governance & \\
+%         %... add more rows as necessary
+%         \bottomrule
+%     \end{tabular}
+%     \caption{Carry Token Utilizations}
+%     \label{table:example}
+% \end{table}
+
+
+
+% \subsubsection{Users}
+% In the traditional advertising ecosystem, users are often the most overlooked participants. Advertising platforms typically assume that since users are already enjoying some basic internet services for free, they should be willing to provide their data and privacy, along with tolerating advertisements. In reality, the commercial value generated from user data has long contributed to the prosperity of the advertising ecosystem. Users, as they engage in internet activities, are not just consumers of services; they actively contribute their data, thereby supporting the ecosystem.\\
+
+% The Carry Protocol believes that users have the right to access the commercial value generated by their data and the ability to choose how their data is utilized. Within the slot framework, the contributions of players and users' data can be transparently tracked, allowing developers, users, and advertisers to negotiate ad settlement terms based on the value of user data.\\
+
+% We encourage developers and advertisers to share a larger portion of the revenue with players and users. This not only increases user engagement but also helps advertisers build more direct relationships with users and foster more adhesive communities, ultimately granting advertisers greater influence over users.
+
+
+% \subsection{Comparison of Incentive Distribution}
+
+% \begin{table}[!htb]
+%     \centering
+%     \begin{tabular}{>{\raggedright\arraybackslash}p{2.5cm} p{6cm} p{6cm}}
+%         \toprule
+%         \textbf{Role} & \textbf{Traditional Ad Platform} & \textbf{Carry Protocol}  \\
+%         \midrule
+%         \multirow{2}{2.5cm}{Developers} 
+%         & Income is limited by platform fees, hindering innovation. 
+%         & Direct collaboration with advertisers through slots, increased income, reduced costs.  \\
+%         \cmidrule{2-3}
+%         & Lack of transparent ad performance data, unfavorable negotiations. 
+%         & Access to ad performance data at any time, direct settlement with advertisers. \\
+%         \midrule
+%         \multirow{2}{2.5cm}{Advertisers} 
+%         & High platform fees, opaque data mechanisms lower ROI. 
+%         & Directly allocate budgets to developer services, improving ROI and industry efficiency. \\
+%         \cmidrule{2-3}
+%         & High cost of ad performance testing, data constrained by platforms. 
+%         & Use Carry Protocol's measurement metrics for ad performance testing, reducing cost. \\
+%         \midrule
+%         \multirow{2}{2.5cm}{Users} 
+%         & Data and privacy are viewed and contributions with limited benefits. 
+%         & Have the right to receive the commercial value of their data, choose whether data is used. \\
+%         \cmidrule{2-3}
+%         & Participate in internet activities with contributions but no benefits. 
+%         & Share more revenue, build more direct relationships and sticky communities.\\
+%         \midrule
+%         Agencies 
+%         & Difficulty in data acquisition limits effectiveness measurement, audience profiling, and campaign optimization. 
+%         & Provide more services in Carry Protocol's open advertising ecosystem, improving efficiency.\\
+%         \bottomrule
+%     \end{tabular}
+%     \caption{Comparison of Incentives}
+%     \label{table:comparison}
+% \end{table}

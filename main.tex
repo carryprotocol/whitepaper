@@ -1,7 +1,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Carry Article
-% LaTeX 
-% Version 1.1 (18/11/2023)
+% Arsclassica Article
+% LaTeX Template
+% Version 1.1 (1/8/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Lorenzo Pantieri (http://www.lorenzopantieri.net) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %----------------------------------------------------------------------------------------
@@ -25,11 +36,13 @@ BCOR5mm, % Binding correction
 %	TITLE AND AUTHOR(S)
 %----------------------------------------------------------------------------------------
 
-\title{\normalfont\spacedallcaps{Carry Protocol}} % The article title
+\title{\normalfont\spacedallcaps{Carry: Advancing The Future of GameFi}} % The article title
+
+%\subtitle{Subtitle} % Uncomment to display a subtitle
 
 \author{\spacedlowsmallcaps{ Andy Pan\textsuperscript{1}}} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
 
-\date{} % An optional date to appear under the author(s)
+\date{Feb, 2024} % An optional date to appear under the author(s)
 
 %----------------------------------------------------------------------------------------
 
@@ -57,7 +70,7 @@ BCOR5mm, % Binding correction
 
 \listoffigures % Print the list of figures
 
-\listoftables % Print the list of tables
+% \listoftables % Print the list of tables
 
 \let\thefootnote\relax\footnotetext{\textsuperscript{1} \textit{Principle Engineer, Singapore}}
 
@@ -67,9 +80,11 @@ BCOR5mm, % Binding correction
 %----------------------------------------------------------------------------------------
 \section*{Abstract} % This section will not appear in the table of contents due to the star (\section*)
 
-Carry introduces an innovative advertising protocol tailored for the gaming industry, offering the potential for increased revenue for game developers and players. By replacing traditional advertising platforms, this protocol not only enhances the advertising effectiveness for advertisers but also reduces associated costs.\\
+Carry introduces an innovative protocol tailored for the game industry, offering the potential for increased revenue for game developers and players. By replacing traditional game platforms, Carry protocol provides powerful features for building, conducting analysis in games, bridging Web2 and Web3 games, and placing in game advertisement. \\
 
-The Carry Protocol introduces a transformative approach to integrating advertising into the world of web3 gaming. Through the innovative concept of slots - virtual spaces, soundscapes, or digital entities within games - it offers an unintrusive avenue for presenting advertisements. These slots, inherently tied to specific game environments, can manifest as visual displays, auditory cues, or even interactive virtual entities. Given their intrinsic value, slots are not just static elements but tradable assets within the Carry ecosystem. The paper delves deep into the mechanics of slots, elucidating their lifecycle, potential monetization strategies through auctions, and the importance of performance metrics in optimizing their impact. Moreover, the role of the Carry token and Carry fuel underpins the economic dynamics of the system, ensuring seamless transactions within the Carry marketplace. This protocol harnesses the power of blockchain and decentralized governance, promoting a balanced, sustainable, and player-centric advertising ecosystem in the gaming world.
+The Carry Protocol introduces a transformative approach to integrating advertising into the world of web3 games. Through the innovative concept of slots - virtual spaces, soundscapes, or digital entities within games - it offers an unintrusive avenue for presenting advertisements. These slots, inherently tied to specific game environments, can manifest as visual displays, auditory cues, or even interactive virtual entities. Given their intrinsic value, slots are not just static elements but tradable assets within the Carry ecosystem. The paper delves deep into the mechanics of slots, elucidating their lifecycle, potential monetization strategies through auctions, and the importance of performance metrics in optimizing their impact. Moreover, the role of the Carry token and Carry fuel underpins the economic dynamics of the system, ensuring seamless transactions within the Carry marketplace. This protocol harnesses the power of blockchain and decentralized governance, promoting a balanced, sustainable, and player-centric advertising ecosystem in the game world. \\
+
+Carry Protocol also offers a robust platform equipped with an Software Development Kit (SDK) and powerful modular tools, enabling game developers to efficiently manage and monetize digital assets such as fungible and non-fungible tokens (FTs and NFTs). The Carry SDK enables Web2 games to integrate blockchain technology easily. At the same time, Carry SDK provides a simplified mechanism for managing in-game assets and user accounts for both Web2 and Web3 games. 
 
 %----------------------------------------------------------------------------------------
 %	AUTHOR AFFILIATIONS
@@ -87,17 +102,39 @@ The Carry Protocol introduces a transformative approach to integrating advertisi
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
 
-\include{introduction}
+\include{Chap1_introduction}
 %----------------------------------------------------------------------------------------
 
+
+\include{Chap2_Proposed_Novel_Advertising_Paradigm}
+
+
+
+\include{Chap3_Data_Analysis_Module_for_Games}
+
+\include{Chap4_General_Infrastructure_for_Both_Web2.0_and_Web3.0_Games}
+
+
+\include{Chap5_Economic_and_Incentive_Mechanisms}
+
+\include{Chap6_Protocol_Implementation}
+
+% \include{carryprotocol}
+% %	METHODS
+% %----------------------------------------------------------------------------------------
+% \include{carryarchitect}
+
+% \include{economics}
+% \include{eco}
+\include{conclusion}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
 % \renewcommand{\refname}{\spacedlowsmallcaps{References}} % For modifying the bibliography heading
-% \bibliographystyle{unsrt}
-% \bibliography{sample.bib} % The file containing the bibliography
+\bibliographystyle{unsrt}
+\bibliography{sample.bib} % The file containing the bibliography
 
 %----------------------------------------------------------------------------------------
 

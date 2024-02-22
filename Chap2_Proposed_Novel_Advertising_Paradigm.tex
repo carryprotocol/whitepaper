@@ -1,0 +1,205 @@
+\section{Proposed Novel Advertising Paradigm}
+
+\subsection{Overview}
+
+
+% Imagine playing an online game where you can own and trade parts of the game world. That's what's happening with Carry Protocol's 'slots' in new blockchain games. The Carry protocol architecture is shown in Figure \ref{fig:big_picture}.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=1\textwidth]{carryslot.jpg}
+%     \caption{Carry Slot Based Advertising}
+%     \label{fig:big_picture}
+% \end{figure}
+
+The Carry Protocol introduces something called "slots" in online games, which are like digital billboards or sponsored items within the game. These slots add value without getting in the way of gameplay and allow advertisers to get more bang for their buck.
+
+Normally in games, the game makers control everything you see and use. But in these new games, players can own unique game items, like a special sword or a piece of land, which they can buy, sell, or trade. These items are called NFTs, which are like digital collectibles that you truly own.
+
+Game developers must establish clear ownership guidelines when introducing slots as in-game advertising spaces. There are two categories of slots: those that are inherent to the game's environment (game native assets) and those that are controlled by players (player owned assets). For instance, a billboard within the game's landscape serves as a game native asset. Contrastingly, player-specific items such as character skins or pets, which are created and consequently 'minted' by players, represent player owned assets. 
+
+% The economics of these slots, which include their creation, ownership, and value within the game's marketplace, are elaborated in Figure \ref{fig:big_picture}.
+
+To elucidate, let's consider a hypothetical scenario. A digital realm, 'LandA', owned by 'Addr1', becomes a canvas for an advertisement. When the developer introduces a slot to this realm, it isn't just assigned to the player 'Addr1'. Instead, it's as if 'LandA' itself becomes enhanced, now comprising both the original realm and the new slot. Symbolically:
+
+\[\text{Addr1} \rightarrow \text{Land A}\]
+
+Transforms to:
+
+\[\text{Addr1} \rightarrow (\text{LandA}, \text{SlotA})\]
+
+This distinction is crucial. The slot isn't an isolated entity but rather correlates with a specific in-game asset. It isn't a generic add-on but a tailored integration. And to facilitate this tailored relationship, technologies like EIP-6220 can be leveraged, ensuring that the connection between the game asset and its corresponding slot is both seamless and efficient.
+
+In summary, Carry Protocol is re-imagining how ads fit into video games. Instead of being annoying interruptions, they're becoming a natural part of the game's world. This setup lets game creators and players work together in new ways, making the game more engaging while also figuring out who gets to own these digital ad spaces. It's a fresh approach that could change games and advertising for the better.
+
+\subsection{Basic Definitions}
+Within the Carry Protocol, several foundational concepts drive its operation in the web3 games world. This section elucidates these essential principles, highlighting their role and importance in the Carry ecosystem.
+\begin{enumerate}
+    \item \textbf{Slot:} The fundamental unit within Carry, serving as the primary canvas for advertisement placements.
+    \item \textbf{Slot Time:} A designated time frame for which a slot can be utilized, regulated by the Carry governance.
+    \item \textbf{Auctioning:} The dynamic process by which slots' time and positioning are bid upon, determining their allocation based on market demand and value perception.
+    \item \textbf{Marketplace:} A decentralized platform where slots can be traded, purchased, or leased, fostering a vibrant ecosystem around the advertisement spaces.
+\end{enumerate}
+
+\subsection{Concrete Designs}
+
+The central tenet of the Carry Protocol hinges on the intricate lifecycle of slots. These slots are not mere placeholders but dynamic entities that embody a unique relationship with game assets and advertisements. Here's a closer look at their lifecycle:
+
+\begin{itemize}
+    \item \textbf{Creation and Initialization:} Game creators are given special slots that they can easily put into their games. Once these slots are in place, the creators or the players can start using them, turning them into one-of-a-kind digital items. 
+    \item \textbf{Asset Status Management:} The protocol oversees and modifies the status of each asset, ensuring up-to-date representation within the ecosystem.
+    \item \textbf{Asset Relationship Management:} The system smartly manages how different parts of the game work together, particularly when something changes. For example, when a slot stops showing an ad, the ad is no longer connected to that slot.
+\end{itemize}
+
+
+\subsubsection{Slot Status}
+\begin{itemize}
+    \item \textbf{Idle:} The slot is in a passive state, devoid of any advertisements.
+    \item \textbf{Placement:} The slot is actively displaying an advertisement.
+    \item \textbf{Pre-initialization:} The slot awaits proper initialization or minting, making it unowned within the ecosystem.
+    \item \textbf{Initialization:} Pertains to the formal creation of a slot for a specific game asset, represented technically by the minting of the slot NFT.
+\end{itemize}
+
+\subsubsection{Slot Relationships}
+Two primary relationships define a slot's existence:
+\begin{itemize}
+    \item \textbf{Ownership Dynamics:} Dictates the proprietorship of the slot, tracing it to either a developer, gamer, or directly linking it to a specific in-game asset. At the outset, this ownership typically aligns with a distinct game asset.
+    \item \textbf{Advertisement Affiliation:} Emphasizes the bond between the slot and the advertisements it hosts. The intrinsic value of a slot is not just its mere existence, but its capacity to exhibit advertisements and, in turn, generate revenue.
+\end{itemize}
+
+\subsubsection{Slot-Ad Lifecycle}
+
+Examining slots from an advertising temporal perspective helps understand how they accrue value in the ad ecosystem:
+
+\begin{itemize}
+    \item \textbf{Slot Placement Duration Auction:} Taking cues from platforms like OpenSea, slots undergo an auction or selection process. Unlike traditional auctions where ownership is transferred, slots are typically leased for a predetermined duration, conferring advertisement display rights without altering slot ownership.
+    
+    \item \textbf{Ad Content Placement:} Once a slot is chosen, it's imbued with the pertinent advertising content.
+    
+    \item \textbf{Value Generation:} The advertisement, once viewed or engaged with by users or gamers, starts accruing value.
+    
+    \item \textbf{End of Ad Cycle:} Upon reaching the designated period, the advertisement's active phase ceases, reverting the slot to its idle state.
+    
+    \item \textbf{Ad Effect Tracking:} This phase is earmarked for gauging the repercussions and reach of the advertisement.
+    
+    \item \textbf{Ad Settlement:} Beyond the initial fee amassed during the auction, any supplementary value spawned by the advertisement's efficacy is settled at this juncture.
+\end{itemize}
+
+\subsubsection{Actions on Slots}
+Several actions can be taken on a slot, determining its trajectory and interaction with ads:
+
+\begin{itemize}
+    \item \textbf{Ad Placement:} Assigning a specific advertisement to the slot for display.
+    
+    \item \textbf{Ad Removal:} Extracting the currently showcased advertisement from the slot, returning it to a vacant state.
+    
+    \item \textbf{Transfer of Rights:} Conveying the privileges or ownership of the slot to another entity.
+    
+    \item \textbf{Slot Exchange:} Engaging in transactions to exchange slots with other participants.
+\end{itemize}
+
+
+\subsubsection{Placement Strategy}
+The strategy of placement ads onto slots determines how slots accrue value and relevance within the game ecosystem. As developers and advertisers navigate this space, optimizing placement strategies ensures slots' maximum potential is realized. 
+
+Carry provides the following built in strategies:
+\begin{itemize}
+    \item \textbf{Distinct Time Allocation:} Slots are auctioned for exclusive, well-defined time periods.
+    
+    \item \textbf{Periodic Time Allocation:} Slots are systematically scheduled for recurring durations.
+    
+    \item \textbf{Enduring Lease:} The slot is granted on a long-term basis to a specific party. Nonetheless, the lessee has the prerogative to auction this lease in the Carry marketplace.
+\end{itemize}
+
+
+
+
+\subsection{Governance Mechanism}
+
+Imagine Carry Governance as the manager of a digital billboard. It matches ads with the right spots in the virtual game world, ensuring that everything fits together nicely and the game experience stays enjoyable and cohesive. Carry governance includes the following functions:
+
+\begin{itemize}
+    \item \textbf{Slot Allocation Governance:} Determines and assigns specific virtual spaces for advertisement displays.
+    
+    \item \textbf{Content-Slot Matching:} Regulates and ensures the relevant advertisement content is mapped to its corresponding slot.
+
+    \item \textbf{Ad Lifecycle Management:} Governs the duration and lifecycle of an advertisement within a slot.
+
+    \item \textbf{Ad Quality Oversight:} Establishes standards and ensures displayed advertisements meet quality and relevance criteria.
+    
+    \item \textbf{User Feedback Integration:} Incorporates feedback mechanisms and uses player responses to refine ad placements.
+
+    \item \textbf{Dispute Resolution:} Manages and resolves conflicts that may arise in terms of slot assignments or advertisement displays.
+\end{itemize}
+
+
+
+\subsection{Ad Settlement Mechanism}
+
+Beyond the foundational fee secured during the auction phase, any additional value derived from the ad's performance is settled. The settlement mechanism can be divided into:
+
+\begin{enumerate}
+    \item \textbf{Basic Placement Fee (\( BPF \))}: 
+    \begin{equation}
+    \text{Fee} = BPF \times t
+    \end{equation}
+    where \( t \) is the actual duration of the ad placement.
+
+    \item \textbf{Performance-based Incentives (\( PM \))}: Depending on the agreement, this could be:
+    \begin{itemize}
+        \item \textbf{CPS (Cost Per Sale)}: For on-chain businesses, e.g., NFT sales.
+        \item \textbf{CPA (Cost Per Acquisition)}: Based on user metrics.
+        \item \textbf{CPL (Cost Per Liquidity)}: In scenarios like DeFi, based on staked asset value.
+        \item \textbf{CPI (Cost Per Installation)}: Metrics based on app installations.
+    \end{itemize}
+\end{enumerate}
+
+Ultimately, the revenue (\( R \)) for a slot owner is:
+\begin{equation}
+R = A \times (BPF \times t) + B \times \Sigma PM \times \Sigma PR
+\end{equation}
+where \( PR \) represents the Performance Ratios, and \( A \) and \( B \) are coefficients. Slot owners can adjust these coefficients to maximize their returns.
+
+% \subsection{Carry Marketplace}
+% Carry provides its own marketplace for asset trading/auctioning. These assets include:
+% \begin{itemize}
+%     \item Advertisement Slots
+%     \item NFTs
+%     \item NFTs that can be used as advertisement content
+%     \item Carry token
+%     \item Crypto assets like ETH and BTC etc.
+% \end{itemize}
+
+% Assets can be traded with each other on the Carry marketplace. Slots can be traded through this process. Slot time, based on the strategy, can be auctioned/traded on the Carry marketplace as well. 
+
+% \subsubsection{Slot Auction Mechanism}
+
+
+% In the Carry Protocol, slots are like prime digital real estate for ads within games. They are auctioned off to the highest bidder, similar to how you might bid for a popular item on eBay. But instead of buying the slots, advertisers rent them for a certain time. This way, they get to show their ads in the game without owning the slots permanently.
+
+% % We suggest using a Dutch auction for selling ad space. Here's how it works: the price for advertising starts high and drops over time until someone agrees to pay. Advertisers watch the price fall and jump in when they think the price is right for the value they’ll get. This makes the selling process fast and fair because it matches what advertisers are willing to pay with what game developers expect for their ad spaces.
+
+% % \begin{figure}[h]
+% %     \centering
+% %     \includegraphics[width=0.8\textwidth]{equilibrium.jpg}
+% %     \caption{Equilibrium of Slot Pricing}
+% %     \label{fig:equilibrium}
+% % \end{figure}
+
+
+% Here's a closer look at the process:
+% \begin{itemize}
+%     \item The slot owner (or their agent) sets an initial price for each slot placement duration. Ideally, this price is higher than the last traded price for the same slot duration.
+%     \item Given the slot owner's preference for filling their slot durations, the price for the slot placement duration progressively drops over time, urging advertisers to place their bids quickly.
+%     \item Advertisers monitor the pricing trend of the slot placement duration. Failing to bid in time and missing out to other bidders means losing an advertising opportunity. Hence, advertisers are inclined to bid once the price seems reasonable.
+%     \item Slot owners (or agents) have a reserve price for their slot placement durations. If bids fall below this threshold, the auction becomes void and needs a restart.
+% \end{itemize}
+
+
+
+% \subsection{Slot Lifecycle}
+
+
+% In a web3 game, a "slot" is essentially a spot where ads can go, chosen when the game is being made. For instance, in a shooting game, ads could appear as graffiti on a virtual wall. Who owns this ad space depends on where it is. If it's part of the game's environment, like the wall, it's owned by the game's creators. But if it's tied to a player's character, like a logo on a shirt, then the player owns it.
+
+% The owner of a slot can decide to use it for ads themselves or offer it up to others by selling or renting it out through a marketplace. This way, slots become a flexible tool for advertising in the game world.
